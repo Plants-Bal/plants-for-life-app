@@ -1,0 +1,50 @@
+/* src/index.css */
+
+/*
+  1. Import Tailwind CSS base styles.
+  This injects Tailwind's "Preflight" base styles, which is a set of sensible defaults
+  and resets to help smooth out cross-browser inconsistencies.
+*/
+@tailwind base;
+
+/*
+  2. Import Tailwind CSS component classes.
+  This injects Tailwind's component classes. If you're mostly using utility classes
+  directly in your JSX, this might inject less, but it's standard practice to include it.
+  You can also define your own custom component classes using @layer components here
+  or in your tailwind.config.js file.
+*/
+@tailwind components;
+
+/*
+  3. Import Tailwind CSS utility classes.
+  This injects all of Tailwind's utility classes (like text-center, bg-blue-500, p-4, etc.)
+  that you use throughout your application.
+*/
+@tailwind utilities;
+
+/* Optional: You can add any very minimal custom global base styles or overrides here.
+   However, try to do as much as possible with Tailwind's configuration and utility classes.
+*/
+body {
+  /* Example: A common practice for better font rendering.
+     Tailwind's 'base' (Preflight) already sets a default font-family and handles box-sizing.
+  */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* You could set a default background color for the body here if not done elsewhere,
+     though often this is handled on a main layout div or within Tailwind's config.
+     e.g., background-color: #f9fafb; (a light gray, similar to tailwind's gray-50)
+  */
+}
+
+/*
+  If you have custom reusable component styles you want to define using Tailwind's @apply,
+  you can do it here within the @layer components directive, for example:
+
+  @layer components {
+    .btn-primary {
+      @apply py-2 px-4 bg-green-500 text-white font-semibold rounded-lg shadow-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-75;
+    }
+  }
+*/
